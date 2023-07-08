@@ -1,0 +1,24 @@
+{
+  "name": "@csmtools/blue-gems",
+  "version": "1.0.0",
+  "description": "Counter-Strike tool for working with Case Hardened blue gems.",
+  "main": "build/index.js",
+  "repository": "https://github.com/CSMTools/blue-gems",
+  "author": "Albin Hedwall <albin.hedwall@gmail.com>",
+  "license": "GPL-3.0",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.1.6"
+  },
+  "keywords": [
+    "csgo",
+    "cs2",
+    "fade",
+    "cs"
+  ],
+  "scripts": {
+    "build": "tsc"
+  }
+}
