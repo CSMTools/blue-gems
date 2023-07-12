@@ -8,15 +8,7 @@ export type TierBySeedValue = {
 
 export abstract class Base {
     abstract seedsByTier: SeedsByTierValue;
-    tierBySeed: TierBySeedValue;
-
-    /**
-     * Must pass self when running super();
-     * @param self this
-     */
-    constructor(self: Base) {
-        this.tierBySeed = this.#reverseSeedsByTier(self.seedsByTier);
-    }
+    abstract tierBySeed: TierBySeedValue;
 
     getTier(seed: number): TierKey {
         return this.tierBySeed[seed];
@@ -26,10 +18,10 @@ export abstract class Base {
         return this.seedsByTier[tier];
     }
 
-    #reverseSeedsByTier(seedsByTier: SeedsByTierValue) {
+    _reverseSeedsByTier(seedsByTier: SeedsByTierValue) {
         const result: TierBySeedValue = {};
         for (let tier in seedsByTier) {
-            for (let seed in seedsByTier[tier as TierKey]) {
+            for (let seed of seedsByTier[tier as TierKey]) {
                 result[seed] = tier as TierKey;
             }
         }
