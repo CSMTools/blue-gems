@@ -12,10 +12,13 @@
     "tsc": "^2.0.4",
     "typescript": "^5.1.6"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "csgo",
     "cs2",
-    "fade",
+    "blue-gem",
     "cs"
   ],
   "scripts": {
